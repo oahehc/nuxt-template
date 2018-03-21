@@ -27,13 +27,13 @@ module.exports = {
     color: '#3B8070'
   }, // Customize the progress bar color
   build: {
-    extend(config, {isDev, isClient, isServer}) {
+    extend(config, { isDev, isClient, isServer }) {
       if (isDev && isClient) {
         //  Run ESLint on save
         config
           .module
           .rules
-          .push({enforce: 'pre', test: /\.(js|vue)$/, loader: 'eslint-loader', exclude: /(node_modules)/})
+          .push({ enforce: 'pre', test: /\.(js|vue)$/, loader: 'eslint-loader', exclude: /(node_modules)/ })
       }
       if (isDev) {
         config.devtool = 'eval-source-map'
@@ -46,12 +46,12 @@ module.exports = {
       plugins: ['transform-runtime']
     },
     extractCSS: true,
-    postcss: [require('autoprefixer')({browsers: ['> 5%']})],
+    postcss: [require('autoprefixer')({ browsers: ['> 5%'] })],
     vendor: ['axios', 'babel-polyfill', 'vue-i18n']
   },
-  plugins: ['~/plugins/i18n.js'],
+  plugins: ['~/plugins/i18n.js'], // apply vue plugin
   router: {
-    middleware: 'i18n'
+    middleware: 'i18n' // run before rendering
   },
   serverMiddleware: ['~/api/logger']
 }
