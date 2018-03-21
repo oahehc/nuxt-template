@@ -20,7 +20,7 @@ export default {
   },
   validate({ params }) {
     // route param validate
-    const allow = ["andrew", "zoey"];
+    const allow = ["andrew", "chehao"];
     return allow.indexOf(params.id) > -1;
   },
   head() {

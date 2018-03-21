@@ -40,8 +40,8 @@ export default {
         name: "Andrew"
       },
       {
-        id: "zoey",
-        name: "Zoey"
+        id: "chehao",
+        name: "CheHao"
       }
     ]
   }),
