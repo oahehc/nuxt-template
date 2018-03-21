@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const state = () => ({amount: 0})
+export const state = () => ({ amount: 0 })
 
 export const mutations = {
   increment(state) {
@@ -15,9 +15,9 @@ export const mutations = {
 }
 
 export const actions = {
-  async init({commit}) {
-    console.log('init');
-    const {data} = await axios.get("https://api.ipify.org?format=json");
+  async init({ commit }) {
+    console.log('--action: init');
+    const { data } = await axios.get("https://api.ipify.org?format=json");
     commit("setDefault", 99);
   }
 }

@@ -4,7 +4,7 @@ export const plugins = [myPlugin];
 
 export const actions = {
   async nuxtServerInit(context, { req }) { // https://nuxtjs.org/guide/vuex-store#the-nuxtserverinit-action
-    console.log('==nuxtServerInit');
+    console.log('--nuxtServerInit');
     // await context.dispatch('xxx');
   }
 };

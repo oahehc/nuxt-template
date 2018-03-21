@@ -1,3 +1,3 @@
 export default function (context) {
-  console.log('Logger');
+  console.log('--middleware Logger');
 }
